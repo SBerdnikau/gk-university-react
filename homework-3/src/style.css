@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 100px;
+    margin: 0 auto;
+    max-width: 1024px;
+    background-color: rgb(70, 106, 223);
+}
+h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+pre{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}

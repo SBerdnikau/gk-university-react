@@ -1,0 +1,20 @@
+.loginPanel{
+    padding: 14px 20px;
+    background-color: chocolate;
+    color: white;
+    font-size: 16px;
+    border: 1px solid red;
+    width: 300px;
+}
+
+.loginBtn{
+    display: block;
+    padding: 8px 16px;
+
+}
+
+.loginInput,.loginPsw{
+    padding: 4px;
+    margin-bottom: 6px;
+    width: 95%;
+}
