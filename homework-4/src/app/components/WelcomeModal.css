@@ -1,0 +1,22 @@
+.modal{
+    background: #bfbfbf;
+    margin: 20px auto;
+    width: 40%;
+    padding: 20px;
+    position: absolute;
+    top: 95px;
+    left: 30%;
+    color: #3d1f1f;
+}
+
+.bodyModal{
+    margin: 20px 0;
+}
+
+.closeModal{
+    float: right;
+}
+
+.closeDisplay{
+    display: none;
+}
