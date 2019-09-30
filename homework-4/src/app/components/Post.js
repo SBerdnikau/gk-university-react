@@ -15,11 +15,12 @@ export default class Post extends Component{
 
     addPost(event) {
         event.preventDefault();
-         const post = [
-            this.myRefTitle.current.value,
-            this.myRefBody.current.value,
-            this.myRefAuthor.current.value
-        ];
+         const post = {
+             title: this.myRefTitle.current.value,
+             bodyPost: this.myRefBody.current.value,
+             date: new Date().toLocaleString(),
+             author: this.myRefAuthor.current.value
+         };
          console.log(post)
 
         const postsNew =  [...this.state.posts, post];
