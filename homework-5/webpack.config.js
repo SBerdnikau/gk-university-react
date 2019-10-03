@@ -1,4 +1,8 @@
-const path = require("path");
+const path = require('path'),
+    //HTMLplugin = require('html-webpack-plugin'),
+    MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+    UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 
 module.exports = {
   entry: "./src/index.js",
@@ -16,10 +20,23 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+        ],
       }
     ]
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],   },
+  plugins: [
+    // new HTMLplugin({
+    //   template: path.resolve(__dirname, 'src', 'index.html'),
+    //   filename: 'index.html'     }),
+    new MiniCssExtractPlugin({
+      filename: 'style.css',     }),
+  ],
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
     historyApiFallback: true
